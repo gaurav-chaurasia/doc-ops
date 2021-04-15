@@ -1,8 +1,6 @@
 // node modules
 const express = require('express');
 const app     = express();
-const multer  = require('multer');
-const uuid    = require('uuid').v4;
 const path    = require('path');
 const layout  = require("express-ejs-layouts");
 

@@ -1,3 +1,6 @@
+const Logger = require('../config/logger').init('MASTER');
+
 exports.getHome = (req, res) => {
-    res.render("v1/index");
+    Logger.info('check logger');
+    res.render('v1/index');
 };

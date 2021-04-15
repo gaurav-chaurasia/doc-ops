@@ -1,7 +1,12 @@
+// local node modules 
 const app = require('./app');
-const PORT = process.env.PORT || '3000';
+const Logger = require('./config/logger').init('MASTER');
+const config = require('./config/config')[process.env.NODE_ENV || 'development'];
 
-
-app.listen(PORT, () => {
-    console.log(`Server is Running at http://localhost:${PORT}`);
+app.listen(config.PORT, () => {
+    Logger.info(`🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻`);
+    Logger.info(``);
+    Logger.info(`🚩 Server is Running at << http://localhost:${config.PORT} >>`);
+    Logger.info(``);
+    Logger.info(`🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺`);
 });
