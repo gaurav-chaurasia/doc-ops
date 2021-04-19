@@ -1,37 +1,41 @@
 <div class="upload-form">
-  <form class="container" action="/upload/doc" method="POST">
-      <div class="drop-zone">
-        <span class="drop-zone__prompt">
-            <i class="fa fa-upload" aria-hidden="true"></i>
-        </span>
-        <input type="file" name="my_file" class="drop-zone__input">
-      </div>
-      <div class="row">
-        <div class="col-md-6 my-3" style="padding-left: 70px">
-          <label for="checkbox">Search String</label>
-          <textarea name="search_string" id="" cols="100" rows="10"></textarea>
+    <form class="container" action="/upload/doc" method="POST">
+        <div class="drop-zone">
+            <span class="drop-zone__prompt">
+                <i class="fa fa-upload" aria-hidden="true"></i>
+            </span>
+            <input type="file" name="my_file" class="drop-zone__input" />
         </div>
+        <div class="row">
+            <div class="col-md-6 my-3" style="padding-left: 70px">
+                <label for="checkbox">Search String</label>
+                <textarea name="search_string" id="" cols="100" rows="10"></textarea>
+            </div>
 
-        <div class="col-md-6 my-3" style="padding: 50px">
-          <div class="form-group">
-            <input type="checkbox">
-            <label for="checkbox">search the given word</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox">
-            <label for="checkbox">Give overall analysis</label>
-          </div>
-          <div class="form-group">
-            <label for="checkbox">email-me</label>
-            <input type="email">
-          </div>
+            <div class="col-md-6 my-3" style="padding: 50px">
+                <div class="form-group">
+                    <input type="checkbox" />
+                    <label for="checkbox">search the given word</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" />
+                    <label for="checkbox">Give overall analysis</label>
+                </div>
+                <div class="form-group">
+                    <label for="checkbox">email-me</label>
+                    <input type="email" />
+                </div>
+            </div>
         </div>
-      </div>
-      <div style="padding-left: 50px">
-        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="after uploading the document you will be given options to add diff operation on the document">
-          <button class="btn btn-primary my-3 doc-upload-btn"type="submit">Upload</button>
-        </span>
-      </div>
-  </form>
-
+        <div style="padding-left: 50px">
+            <span
+                class="d-inline-block"
+                tabindex="0"
+                data-toggle="tooltip"
+                title="after uploading the document you will be given options to add diff operation on the document"
+            >
+                <button class="btn btn-primary my-3 doc-upload-btn" type="submit">Upload</button>
+            </span>
+        </div>
+    </form>
 </div>
