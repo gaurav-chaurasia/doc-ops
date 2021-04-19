@@ -1,10 +1,10 @@
 <div class="upload-form">
-    <form class="container" action="/upload/doc" method="POST">
+    <form class="container" action="/upload/doc/local" enctype="multipart/form-data" method="POST">
         <div class="drop-zone">
             <span class="drop-zone__prompt">
                 <i class="fa fa-upload" aria-hidden="true"></i>
             </span>
-            <input type="file" name="my_file" class="drop-zone__input" />
+            <input type="file" name="doc_ops" class="drop-zone__input" />
         </div>
         <div class="row">
             <div class="col-md-6 my-3" style="padding-left: 70px">
@@ -28,14 +28,24 @@
             </div>
         </div>
         <div style="padding-left: 50px">
-            <span
-                class="d-inline-block"
-                tabindex="0"
-                data-toggle="tooltip"
-                title="after uploading the document you will be given options to add diff operation on the document"
+            <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title=""> </span>
+            <button
+                class="btn btn-dark my-3 doc-upload-btn"
+                title="Upload"
+                data-toggle="popover"
+                data-trigger="hover"
+                data-content="After uploading the document you will be given options to add diff operation on the document"
+                type="submit"
             >
-                <button class="btn btn-primary my-3 doc-upload-btn" type="submit">Upload</button>
-            </span>
+                Upload
+            </button>
+            <input
+                class="btn btn-dark my-3 doc-upload-btn"
+                data-toggle="popover"
+                data-trigger="hover"
+                data-content="reset the input fields"
+                type="reset"
+            />
         </div>
     </form>
 </div>

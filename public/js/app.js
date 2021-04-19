@@ -1,3 +1,6 @@
+$(document).ready(function () {
+    $('[data-toggle="popover"]').popover();
+});
 // drag drop start
 
 document.querySelectorAll('.drop-zone__input').forEach((inputElement) => {
@@ -77,6 +80,6 @@ function updateThumbnail(dropZoneElement, file) {
 // handle doc upload
 const doc_upload_btn = document.querySelector('.doc-upload-btn');
 doc_upload_btn.addEventListener('click', (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     console.log('Doc Uploaded');
 });
