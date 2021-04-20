@@ -1,61 +1,78 @@
-<div class="upload-form">
-    <form
-        class="container"
-        style="padding: 0"
-        action="/upload/doc/local"
-        enctype="multipart/form-data"
-        method="POST"
-    >
-        <div class="drop-zone">
-            <span class="drop-zone__prompt">
-                <i class="fa fa-upload" aria-hidden="true"></i>
-            </span>
-            <input type="file" name="doc_ops" class="custom-form-input drop-zone__input" />
-        </div>
-        <div class="custom-form-group" style="height: 200px">
-            <label class="custom-form-label" for="email">Search String</label>
-            <textarea
-                cols="100"
-                rows="10"
-                type="checkbox"
-                class="custom-form-input"
-                name="search_string"
-            ></textarea>
-        </div>
-        <div class="custom-form-group">
-            <label class="custom-form-label" for="email">Search String Only</label>
-            <input type="checkbox" class="custom-form-input" name="searched_only" />
-        </div>
-        <div class="custom-form-group">
-            <label class="custom-form-label" for="email">Detailed</label>
-            <input type="checkbox" class="custom-form-input" name="detailed" />
-        </div>
-        <div class="custom-form-group">
-            <label class="custom-form-label" for="email">Email</label>
-            <input type="email" data-qa="txtEmail" class="custom-form-input" name="email" />
-        </div>
-
-        <div>
-            <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title=""> </span>
-            <button
-                class="btn btn-dark my-3 doc-upload-btn"
-                title="Upload"
-                data-toggle="popover"
-                data-trigger="hover"
-                data-placement="bottom"
-                data-content="After uploading the document you will be given options to add diff operation on the document"
-                type="submit"
+<div class="row">
+    <div class="col-md-5">
+        <div class="upload-form">
+            <form
+                class="container"
+                style="padding: 0"
+                action="/upload/doc/local"
+                enctype="multipart/form-data"
+                method="POST"
             >
-                Upload
-            </button>
-            <input
-                class="btn btn-dark my-3 doc-upload-btn"
-                data-toggle="popover"
-                data-trigger="hover"
-                data-placement="bottom"
-                data-content="reset the input fields"
-                type="reset"
-            />
+                <div class="drop-zone">
+                    <span class="drop-zone__prompt">
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                    </span>
+                    <input type="file" name="doc_ops" class="custom-form-input drop-zone__input" />
+                </div>
+                <div class="custom-form-group" style="height: 200px">
+                    <label class="custom-form-label" for="email">Search String</label>
+                    <textarea
+                        cols="100"
+                        rows="10"
+                        type="checkbox"
+                        class="custom-form-input"
+                        name="search_string"
+                    ></textarea>
+                </div>
+                <div class="custom-form-group">
+                    <label class="custom-form-label" for="email">Email</label>
+                    <input type="email" data-qa="txtEmail" class="custom-form-input" name="email" />
+                </div>
+                <div>
+                    <input id="s1" type="checkbox" class="switch" name="searched_only" />
+                    <label for="s1">Search String Only</label>
+                </div>
+                <div>
+                    <input id="s2" type="checkbox" class="switch" name="detailed" checked />
+                    <label for="s2">Detailed Analysis</label>
+                </div>
+
+                <div>
+                    <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="">
+                    </span>
+                    <button
+                        class="btn btn-dark my-3 doc-upload-btn"
+                        title="Upload"
+                        data-toggle="popover"
+                        data-trigger="hover"
+                        data-placement="bottom"
+                        data-content="After uploading the document you will be given options to add diff operation on the document"
+                        type="submit"
+                    >
+                        Upload
+                    </button>
+                    <input
+                        class="btn btn-dark my-3 doc-upload-btn"
+                        data-toggle="popover"
+                        data-trigger="hover"
+                        data-placement="bottom"
+                        data-content="reset the input fields"
+                        type="reset"
+                    />
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
+    <div class="col-md-7 pl-0 pr-3">
+        <div class="pr-3">
+           <div class="pr-3">
+                <div class="response-container">
+                    <!-- everything related to response going to be here -->
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias exercitationem nam consequuntur ipsum mollitia nulla architecto non rem magni minima eum itaque illo voluptates, facere dolores ratione adipisci quae officiis blanditiis iusto? Quia ipsam suscipit, nemo animi placeat dignissimos illo corporis minus modi, eaque repudiandae asperiores blanditiis dicta aliquid maxime debitis. Distinctio a tempore, recusandae voluptates suscipit quidem alias consequatur assumenda possimus atque sequi non praesentium hic ratione officia dignissimos tempora, ex blanditiis quos doloremque. Ut dolorum est dolorem distinctio odio minus quisquam dolor autem provident deleniti? Repellendus delectus ut ullam similique. Eius culpa accusamus itaque? Ad, harum obcaecati.
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
 </div>
