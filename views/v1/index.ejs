@@ -1,39 +1,48 @@
 <div class="upload-form">
-    <form class="container" action="/upload/doc/local" enctype="multipart/form-data" method="POST">
+    <form
+        class="container"
+        style="padding: 0"
+        action="/upload/doc/local"
+        enctype="multipart/form-data"
+        method="POST"
+    >
         <div class="drop-zone">
             <span class="drop-zone__prompt">
                 <i class="fa fa-upload" aria-hidden="true"></i>
             </span>
-            <input type="file" name="doc_ops" class="drop-zone__input" />
+            <input type="file" name="doc_ops" class="custom-form-input drop-zone__input" />
         </div>
-        <div class="row">
-            <div class="col-md-6 my-3" style="padding-left: 70px">
-                <label for="checkbox">Search String</label>
-                <textarea name="search_string" id="" cols="100" rows="10"></textarea>
-            </div>
+        <div class="custom-form-group" style="height: 200px">
+            <label class="custom-form-label" for="email">Search String</label>
+            <textarea
+                cols="100"
+                rows="10"
+                type="checkbox"
+                class="custom-form-input"
+                name="search_string"
+            ></textarea>
+        </div>
+        <div class="custom-form-group">
+            <label class="custom-form-label" for="email">Search String Only</label>
+            <input type="checkbox" class="custom-form-input" name="searched_only" />
+        </div>
+        <div class="custom-form-group">
+            <label class="custom-form-label" for="email">Detailed</label>
+            <input type="checkbox" class="custom-form-input" name="detailed" />
+        </div>
+        <div class="custom-form-group">
+            <label class="custom-form-label" for="email">Email</label>
+            <input type="email" data-qa="txtEmail" class="custom-form-input" name="email" />
+        </div>
 
-            <div class="col-md-6 my-3" style="padding: 50px">
-                <div class="form-group">
-                    <input type="checkbox" />
-                    <label for="checkbox">search the given word</label>
-                </div>
-                <div class="form-group">
-                    <input type="checkbox" />
-                    <label for="checkbox">Give overall analysis</label>
-                </div>
-                <div class="form-group">
-                    <label for="checkbox">email-me</label>
-                    <input type="email" />
-                </div>
-            </div>
-        </div>
-        <div style="padding-left: 50px">
+        <div>
             <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title=""> </span>
             <button
                 class="btn btn-dark my-3 doc-upload-btn"
                 title="Upload"
                 data-toggle="popover"
                 data-trigger="hover"
+                data-placement="bottom"
                 data-content="After uploading the document you will be given options to add diff operation on the document"
                 type="submit"
             >
@@ -43,6 +52,7 @@
                 class="btn btn-dark my-3 doc-upload-btn"
                 data-toggle="popover"
                 data-trigger="hover"
+                data-placement="bottom"
                 data-content="reset the input fields"
                 type="reset"
             />
