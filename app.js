@@ -3,9 +3,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const layout = require('express-ejs-layouts');
+require('dotenv').config();
 
-// local node modules
-const ROUTER = require('./routes');
 
 app.use(layout);
 app.set('layout', './v1/layouts/layout');
@@ -20,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // set local variables
 // ----------------------------------------
 app.use((req, res, next) => {
-    req.client_ip = req.connection.remoteAddress;
+    req.client_ip = req.socket.remoteAddress;
     
     // for views
     res.locals.client_ip = req.client_ip;
@@ -29,6 +28,6 @@ app.use((req, res, next) => {
 });
 
 // setting router
-app.use(ROUTER);
+app.use(require('./routes'));
 
 module.exports = app;
