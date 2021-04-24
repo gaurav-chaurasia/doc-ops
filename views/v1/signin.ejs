@@ -1,0 +1,68 @@
+<div class="upload-form">
+    <h2 class="mb-3">
+        <small>Login</small>
+    </h2>
+    <form
+        class="container"
+        style="padding: 0"
+        action="/login"
+        method="POST"
+    >
+        <div class="custom-form-group">
+            <label class="custom-form-label" for="email">Email *</label>
+            <input
+                type="email"
+                data-qa="txtEmail"
+                class="custom-form-input"
+                name="email"
+                required
+            />
+        </div>
+
+        <div class="custom-form-group">
+            <label class="custom-form-label" for="password">Password *</label>
+            <input type="password" class="custom-form-input" name="password" required />
+        </div>
+
+        <div>
+            <input id="c2" type="checkbox" name="remember_me" checked />
+            <label for="c2">Remember Me</label>
+            <label class="small" style="width: 65%; text-align: right">
+                <a href="#" rel="noopener noreferrer"> 
+                    Forget Password
+                </a>
+            </label>
+        </div>
+
+        <div class="mt-1">
+            <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title=""> </span>
+            <button
+                class="btn btn-dark my-3 doc-upload-btn"
+                title=""
+                data-toggle="popover"
+                data-trigger="hover"
+                data-placement="bottom"
+                data-content="* fields are mendatory"
+                type="submit"
+            >
+                Login
+            </button>
+            <input
+                class="btn btn-dark my-3 doc-upload-btn"
+                data-toggle="popover"
+                data-trigger="hover"
+                data-placement="bottom"
+                data-content="reset the input fields"
+                type="reset"
+            />
+        </div>
+    </form>
+    <div class="mt-3 center">
+        <small class="center">
+            <div style="color: #6d758d">
+                Login with
+            </div>
+        </small>
+    </div>
+    <%- include('./partials/oauth') %>
+</div>

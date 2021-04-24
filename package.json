@@ -4,13 +4,14 @@
   "description": "this project is for searching in document using parallel approche",
   "main": "app.js",
   "scripts": {
-    "start": "node server",
+    "start": "nyc mocha --timeout=10000 --exit && node server",
     "dev": "nodemon server",
     "test": "nyc mocha --timeout=10000 --exit"
   },
   "author": "IT301",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^4.1.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",

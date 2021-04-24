@@ -4,7 +4,7 @@ const { spawn } = require('child_process');
 
 // in case you have not add python to env variable
 const PYTHON_EXECUTABLE_PATH = config.PYTHON_EXECUTABLE_PATH;
-const PYTHON_SCRIPT_PATH = path.join(__dirname, '../addons/python/script.py');
+const PYTHON_SCRIPT_PATH = path.join(__dirname, '../addons/python/pdf_scraper.py');
 // runner for script
 function run_script(executable, path, params) {
     return spawn(executable, [path, params]);
