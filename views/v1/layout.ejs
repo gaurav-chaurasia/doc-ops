@@ -41,13 +41,18 @@
         <!-- local css & js files -->
         <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/reuse.css" />
     </head>
     <body>
-        <%- include('../partials/header') %>
-        <div id="body"><%- body %></div>
-        <%- include('../partials/footer') %>
+        <%- include('./partials/header') %>
+        <%- include('./partials/flash') %>
+        <div id="body">
+            <%- body %>
+        </div>
+        <%- include('./partials/footer') %>
 
         <!-- local scripts -->
         <script src="/js/app.js"></script>
+        <script src="/js/doc-upload-handle.js"></script>
     </body>
 </html>

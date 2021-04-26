@@ -1,0 +1,66 @@
+<!-- // req.flash('success', [
+//     { msg: 'Success! You are logged in.' },
+//     { msg: 'Success! You are logged in.' },
+//     { msg: 'Success! You are logged in.' },
+//     { msg: 'Success! You are logged in.' }
+// ]); -->
+<!-- req.flash('success', { msg: ' Success! You are on login page' }); -->
+<% if (messages.info) { %>
+<div class="alert custom-alert alert-info alert-dismissible fade show my-0" role="alert">
+  <div class="container">
+    <% messages.info.forEach((info, i, arr) => { %>
+      <div>
+        <i class="fa fa-info" aria-hidden="true"></i>  
+        <%= info.msg %>
+      </div>
+    <% }); %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+</div>
+<% } %>
+<% if (messages.danger) { %>
+<div class="alert custom-alert alert-danger alert-dismissible fade show my-0" role="alert">
+  <div class="container">
+    <% messages.danger.forEach((danger, i, arr) => { %>
+      <div>
+        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>  
+        <%= danger.msg %>
+      </div>
+    <% }); %>
+      <button type="button" class="custom-close close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+</div>
+<% } %>
+<% if (messages.success) { %>
+<div class="alert custom-alert alert-success alert-dismissible fade show my-0" role="alert">
+  <div class="container">
+    <% messages.success.forEach((success, i, arr) => { %>
+      <div>
+        ✓ <%= success.msg %>
+      </div>
+    <% }); %>
+    <button type="button center-xy-flex" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<% } %>
+<% if (messages.warning) { %>
+<div class="alert custom-alert alert-warning alert-dismissible fade show my-0" role="alert">
+  <div class="container">
+    <% messages.warning.forEach((warning, i, arr) => { %>
+      <div>
+        <i class="fa fa-exclamation" aria-hidden="true"></i>  
+        <%= warning.msg %>
+      </div>
+    <% }); %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+</div>
+<% } %>
