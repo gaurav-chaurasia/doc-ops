@@ -1,12 +1,11 @@
 <div class="upload-form">
-    <h2 class="mb-3">
+    <h2 class="mb-3 center">
         <small>Signup</small>
     </h2>
-    <form
+    <!-- <form
         class="container"
         style="padding: 0"
         action="/signup"
-        enctype="multipart/form-data"
         method="POST"
     >
         <div class="custom-form-group">
@@ -28,6 +27,16 @@
         </div>
 
         <div class="custom-form-group">
+            <label class="custom-form-label" for="email">Username *</label>
+            <input
+                type="text"
+                class="custom-form-input"
+                name="username"
+                required
+            />
+        </div>
+
+        <div class="custom-form-group">
             <label class="custom-form-label" for="email">Email *</label>
             <input
                 type="email"
@@ -41,6 +50,10 @@
         <div class="custom-form-group">
             <label class="custom-form-label" for="password">Password *</label>
             <input type="password" class="custom-form-input" name="password" required />
+        </div>
+        <div class="custom-form-group">
+            <label class="custom-form-label" for="conform-password">Confirm Password *</label>
+            <input type="password" class="custom-form-input" name="confirmPassword" required />
         </div>
 
         <div>
@@ -77,13 +90,7 @@
                 type="reset"
             />
         </div>
-    </form>
-    <div class="mt-3 center">
-        <small class="center">
-            <div style="color: #6d758d">
-                Signup with
-            </div>
-        </small>
-    </div>
+    </form> -->
+
     <%- include('../partials/oauth') %>
 </div>

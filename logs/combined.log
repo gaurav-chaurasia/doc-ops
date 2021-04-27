@@ -1,20 +1,76 @@
-[2021-04-21T11:59:08.374Z] [MASTER] [[32minfo[39m]: 🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
-[2021-04-21T11:59:08.379Z] [MASTER] [[32minfo[39m]: 
-[2021-04-21T11:59:08.380Z] [MASTER] [[32minfo[39m]: 🚩 Server is Running at << http://127.0.0.1:3000 >>
-[2021-04-21T11:59:08.381Z] [MASTER] [[32minfo[39m]: 
-[2021-04-21T11:59:08.382Z] [MASTER] [[32minfo[39m]: 🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
-[2021-04-21T11:59:08.400Z] [MASTER] [[31merror[39m]: Database Connection Error
-[2021-04-21T11:59:40.591Z] [MASTER] [[32minfo[39m]: 🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
-[2021-04-21T11:59:40.596Z] [MASTER] [[32minfo[39m]: 
-[2021-04-21T11:59:40.596Z] [MASTER] [[32minfo[39m]: 🚩 Server is Running at << http://127.0.0.1:3000 >>
-[2021-04-21T11:59:40.597Z] [MASTER] [[32minfo[39m]: 
-[2021-04-23T11:23:58.036Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
-[2021-04-23T11:23:58.042Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
-[2021-04-23T11:29:25.241Z] [MASTER] [[32minfo[39m]: 1619177365227_1.txt
-[2021-04-23T11:31:44.690Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
-[2021-04-23T11:35:40.132Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
-[2021-04-23T11:36:13.934Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
-[2021-04-23T11:36:13.939Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
-[2021-04-23T11:36:14.033Z] [MASTER] [[31merror[39m]: Database Connection Error
-[2021-04-23T11:36:26.519Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
-[2021-04-23T11:36:26.525Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
+[2021-04-27T05:01:27.098Z] [MASTER] [[32minfo[39m]: [32m✓[39m Database Connection Successful
+[2021-04-27T05:01:29.261Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
+[2021-04-27T05:01:29.264Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
+[2021-04-27T05:01:35.852Z] [MASTER] [[32minfo[39m]: [32m✓[39m Database Connection Successful
+[2021-04-27T05:03:41.019Z] [MASTER] [[31merror[39m]: querySrv ENODATA _mongodb._tcp.complete-backend.yxayo.mongodb.net
+[2021-04-27T05:03:41.019Z] [MASTER] [[31merror[39m]: querySrv ENODATA _mongodb._tcp.complete-backend.yxayo.mongodb.net
+[2021-04-27T05:03:41.019Z] [MASTER] [[31merror[39m]: querySrv ENODATA _mongodb._tcp.complete-backend.yxayo.mongodb.net
+[2021-04-27T05:03:41.019Z] [MASTER] [[31merror[39m]: querySrv ENODATA _mongodb._tcp.complete-backend.yxayo.mongodb.net
+[2021-04-27T05:03:51.530Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
+[2021-04-27T05:03:51.532Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
+[2021-04-27T05:03:55.792Z] [MASTER] [[32minfo[39m]: [32m✓[39m Database Connection Successful
+[2021-04-27T05:04:47.382Z] [MASTER] [[31merror[39m]: Failed to serialize user into session
+[2021-04-27T05:07:33.211Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
+[2021-04-27T06:07:54.868Z] [MASTER] [[32minfo[39m]: [32m✓[39m Database Connection Successful
+[2021-04-27T06:08:28.225Z] [MASTER] [[31merror[39m]: Failed to serialize user into session
+[2021-04-27T06:39:18.351Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
+[2021-04-27T06:39:18.361Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
+[2021-04-27T06:39:20.483Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
+[2021-04-27T06:39:20.489Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
+[2021-04-27T06:39:25.117Z] [MASTER] [[32minfo[39m]: [32m✓[39m Database Connection Successful
+[2021-04-27T06:45:43.677Z] [MASTER] [[31merror[39m]: D:\practice\node\doc-ops\views\v1\layout.ejs:47
+    45|     </head>
+    46|     <body>
+ >> 47|         <%- include('./partials/header') %>
+    48|         <%- include('./partials/flash') %>
+    49|         <div id="body">
+    50|             <%- body %>
+
+D:\practice\node\doc-ops\views\v1\partials\header.ejs:19
+    17|                                 <img src="" alt="">
+    18|                             </div> -->
+ >> 19|                             <%= current_user.profile.name %>
+    20|                         </a>
+    21|                     </li>
+    22|                 <% } else { %>
+
+Cannot read property 'name' of undefined
+[2021-04-27T06:47:21.956Z] [MASTER] [[31merror[39m]: D:\practice\node\doc-ops\views\v1\layout.ejs:47
+    45|     </head>
+    46|     <body>
+ >> 47|         <%- include('./partials/header') %>
+    48|         <%- include('./partials/flash') %>
+    49|         <div id="body">
+    50|             <%- body %>
+
+D:\practice\node\doc-ops\views\v1\partials\header.ejs:19
+    17|                                 <img src="" alt="">
+    18|                             </div> -->
+ >> 19|                             <%= current_user.profile.name %>
+    20|                         </a>
+    21|                     </li>
+    22|                 <% } else { %>
+
+Cannot read property 'name' of undefined
+[2021-04-27T06:47:25.803Z] [MASTER] [[31merror[39m]: D:\practice\node\doc-ops\views\v1\layout.ejs:47
+    45|     </head>
+    46|     <body>
+ >> 47|         <%- include('./partials/header') %>
+    48|         <%- include('./partials/flash') %>
+    49|         <div id="body">
+    50|             <%- body %>
+
+D:\practice\node\doc-ops\views\v1\partials\header.ejs:19
+    17|                                 <img src="" alt="">
+    18|                             </div> -->
+ >> 19|                             <%= current_user.profile.name %>
+    20|                         </a>
+    21|                     </li>
+    22|                 <% } else { %>
+
+Cannot read property 'name' of undefined
+[2021-04-27T06:48:06.122Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
+[2021-04-27T06:48:06.124Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
+[2021-04-27T06:48:08.071Z] [MASTER] [[32minfo[39m]: [32m✓[39m Database Connection Successful
+[2021-04-27T06:48:29.098Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
+[2021-04-27T06:48:29.101Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
