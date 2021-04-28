@@ -21,7 +21,7 @@
     <div class="alert-success my-3 px-3 py-3">
         <strong> Search Highlights </strong>
         <div class="my-3">
-            <small> <%= doc_data.local_text %> </small>
+            <small id="text_1"> <%= doc_data.local_text %> </small>
         </div>
     </div>
     <% } else { %>
@@ -103,7 +103,7 @@
                 data-bs-parent="#accordionFlushExample"
             >
                 <div class="accordion-body">
-                    <div class="small mt-3" id="search_highlight"><%= doc_data.text %></div>
+                    <div class="small mt-3" id="text_2"><%= doc_data.text %></div>
                 </div>
             </div>
         </div>

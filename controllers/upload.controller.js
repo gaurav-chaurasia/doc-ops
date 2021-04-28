@@ -96,9 +96,11 @@ exports.afterDocPostLoggedIn = async (req, res, next) => {
             let substring_containing_serch;
             let substring_found_status = false;
             let loc = RAW_TEXT.indexOf(SEARCH_STRING);
-            console.log(SEARCH_STRING);
-            console.log(loc);
-            console.log(RAW_TEXT);
+            
+            // console.log(SEARCH_STRING);
+            // console.log(loc);
+            // console.log(RAW_TEXT);
+            
             if (loc > -1) {
                 substring_count = (RAW_TEXT.match(new RegExp(SEARCH_STRING, 'gi')) || [])
                     .length;
@@ -151,7 +153,7 @@ exports.afterDocPostLoggedIn = async (req, res, next) => {
                 popular_word: word_arr_for_sort.slice(0, 10),
                 info: data.info,
                 numpages: data.numpages,
-                text: data.text,
+                text: RAW_TEXT,
             };
             res.status(200).render('v1/index_loggedin', {
                 doc_data: json_data,
@@ -242,7 +244,7 @@ exports.afterDocPostLoggedOut = (req, res, next) => {
                 popular_word: word_arr_for_sort.slice(0, 10),
                 info: data.info,
                 numpages: data.numpages,
-                text: data.text,
+                text: RAW_TEXT,
             };
             res.status(200).render('v1/index_loggedout', { action: req.url, doc_data: json_data });
         })
