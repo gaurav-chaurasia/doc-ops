@@ -4,7 +4,7 @@
             <form
                 class="container"
                 style="padding: 0"
-                action="api/upload/doc/local"
+                action="http://localhost:3000/api/upload/doc/local"
                 enctype="multipart/form-data"
                 method="POST"
             >
@@ -15,34 +15,11 @@
                     </span>
                     <input type="file" name="doc_ops" class="custom-form-input drop-zone__input" required/>
                 </div>
-                <div class="custom-form-group" style="height: 200px">
-                    <label class="custom-form-label" for="email">Search String</label>
-                    <textarea
-                        cols="100"
-                        rows="10"
-                        type="checkbox"
-                        class="custom-form-input"
-                        name="search_string"
-                    ></textarea>
-                </div>
-                <div class="custom-form-group">
-                    <label class="custom-form-label" for="email">Email</label>
-                    <input type="email" data-qa="txtEmail" class="custom-form-input" name="email" />
-                </div>
-                <div>
-                    <input id="s1" type="checkbox" class="switch" name="search_only" />
-                    <label for="s1">Search String Only</label>
-                </div>
-                <div>
-                    <input id="s2" type="checkbox" class="switch" name="detailed" checked />
-                    <label for="s2">Detailed Analysis</label>
-                </div>
-
                 <div>
                     <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="">
                     </span>
                     <button
-                        class="btn btn-dark my-3 doc-upload-btn"
+                        class="col-12 btn btn-dark my-3 doc-upload-btn"
                         title=""
                         data-toggle="popover"
                         data-trigger="hover"
@@ -52,14 +29,6 @@
                     >
                         Upload
                     </button>
-                    <input
-                        class="btn btn-dark my-3 doc-upload-btn"
-                        data-toggle="popover"
-                        data-trigger="hover"
-                        data-placement="bottom"
-                        data-content="reset the input fields"
-                        type="reset"
-                    />
                 </div>
             </form>
         </div>
@@ -69,8 +38,9 @@
            <div class="pr-3">
                 <div class="response-container">
                     <!-- everything related to response going to be here -->
+                    <h2>Hello, Please upload you document</h2>
                     <div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias exercitationem nam consequuntur ipsum mollitia nulla architecto non rem magni minima eum itaque illo voluptates, facere dolores ratione adipisci quae officiis blanditiis iusto? Quia ipsam suscipit, nemo animi placeat dignissimos illo corporis minus modi, eaque repudiandae asperiores blanditiis dicta aliquid maxime debitis. Distinctio a tempore, recusandae voluptates suscipit quidem alias consequatur assumenda possimus atque sequi non praesentium hic ratione officia dignissimos tempora, ex blanditiis quos doloremque. Ut dolorum est dolorem distinctio odio minus quisquam dolor autem provident deleniti? Repellendus delectus ut ullam similique. Eius culpa accusamus itaque? Ad, harum obcaecati.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio qui consequatur eaque maiores sed, quia architecto totam animi ab sequi earum distinctio placeat ea nesciunt doloremque quas. Unde, amet est? Magni repellendus culpa placeat praesentium, necessitatibus, doloremque pariatur exercitationem dolorum voluptates ipsa facere enim sed quis? Hic deleniti corrupti nemo.
                     </div>
                 </div>
            </div>

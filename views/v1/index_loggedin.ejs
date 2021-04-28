@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-md-5">
+        <div class="upload-form">
+            <form
+                class="container"
+                style="padding: 0"
+                action="http://localhost:3000/api/ope"
+                method="POST"
+            >
+                <div class="custom-form-group">
+                    <label class="custom-form-label" for="email">Select Doc</label>
+                    <select name="doc_name" id="" style="border: none; width: 100%; padding: 10px; padding-top: 15px; color: rgb(138, 138, 138);">
+                        <option value="1619590399448_CV390_SEMINAR_PRESENTATION.pdf">1619590399448_CV390_SEMINAR_PRESENTATION.pdf</option>
+                        <option value="1619615712980_TEMP.pdf">1619615712980_TEMP.pdf</option>
+                        <option value="1619616193079_TEMP.pdf">1619616193079_TEMP.pdf</option>
+                        <option value="1">1</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="custom-form-group" style="height: 200px">
+                    <label class="custom-form-label" for="email">Search String</label>
+                    <textarea
+                        cols="100"
+                        rows="10"
+                        type="checkbox"
+                        class="custom-form-input"
+                        name="search_string"
+                    ></textarea>
+                </div>
+                <div class="custom-form-group">
+                    <label class="custom-form-label" for="email">Email</label>
+                    <input type="email" data-qa="txtEmail" class="custom-form-input" name="email" />
+                </div>
+                <div>
+                    <input id="s1" type="checkbox" class="switch" name="search_only" />
+                    <label for="s1">Search String Only</label>
+                </div>
+                <div>
+                    <input id="s2" type="checkbox" class="switch" name="detailed" checked />
+                    <label for="s2">Detailed Analysis</label>
+                </div>
+
+                <div>
+                    <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="">
+                    </span>
+                    <button
+                        class="btn btn-dark my-3 doc-upload-btn"
+                        title=""
+                        data-toggle="popover"
+                        data-trigger="hover"
+                        data-placement="bottom"
+                        data-content="* fields are mendatory"
+                        type="submit"
+                    >
+                        Perform Task
+                    </button>
+                    <input
+                        class="btn btn-dark my-3 doc-upload-btn"
+                        data-toggle="popover"
+                        data-trigger="hover"
+                        data-placement="bottom"
+                        data-content="reset the input fields"
+                        type="reset"
+                    />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-7 pl-0 pr-3">
+        <div class="pr-3">
+           <div class="pr-3">
+                <div class="response-container">
+                    <!-- everything related to response going to be here -->
+                    <h2>Hello, Please Provide details</h2>
+                    <div>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem nesciunt cum suscipit dicta voluptatibus, maiores ratione aliquam dolorem laudantium, quo veniam quaerat impedit hic non!
+                    </div>
+                </div>
+                <%- include('./partials/show_doc_data') %>
+           </div>
+        </div>
+    </div>
+</div>

@@ -31,9 +31,13 @@ router.get('/logout', userController.logout);
 // router.post('/signup', userController.postSignup);
 
 router.post('/api/upload/doc/local', upload.single('doc_ops'), uploadController.local);
-router.post('/api/upload/doc/S3', uploadController.S3);
+router.get('/api/ope', is_authenticated, uploadController.getAfterDocPostLoggedIn);
+router.post('/api/ope', is_authenticated, uploadController.afterDocPostLoggedIn);
+router.get('/api/ope/:filename', uploadController.getAfterDocPostLoggedOut);
+router.post('/api/ope/:filename', uploadController.afterDocPostLoggedOut);
+// router.post('/api/upload/doc/S3', uploadController.S3);
 
-// router.get('/api/upload/:filename', opsController.docOpsResponse);
+router.get('/api/upload/:filename', opsController.docOpsResponse);
 
 
 router.get('/auth/success', is_authenticated, (req, res, next) => {

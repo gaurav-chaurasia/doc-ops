@@ -2,19 +2,21 @@
     <div id="logo-main" width="200">Doc-Ops</div>
     <nav>
         <ul class="menuItems container">
-            <li><a href="/hrms" data-item="Home">Home</a></li>
-            <li><a href="/about" data-item="About">About</a></li>
-            <li><a href="/projects" data-item="Projects">Projects</a></li>
-            <li><a href="/blogs" data-item="Blog">Blog</a></li>
-            <li><a href="/contacts" data-item="Contact">Contact</a></li>
+            <li><a href="/" data-item="Home">Home</a></li>
+            <li><a href="/api/ope">DocOpe</a></li>
+            <li><a href="#" data-item="About">About</a></li>
+            <li><a href="#" data-item="Projects">Projects</a></li>
+            <li><a href="#" data-item="Contact">Contact</a></li>
             <ul class="dashbord-stuff container">
                 <% if (current_user) { %>
                     <li 
+                    class="d-inline-block"
                     style="border-color: transparent; margin-left: 10px;"
                     data-toggle="popover"
-                    data-trigger="hover"
                     data-placement="bottom"
-                    data-content="<%= current_user.profile.name %>"
+                    data-bs-toggle="popover" 
+                    data-bs-trigger="hover focus" 
+                    data-bs-content="<%= current_user.profile.name %>"
                     >
                     <a href="/account">
                         <div class="profile">

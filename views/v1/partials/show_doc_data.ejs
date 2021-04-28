@@ -1,0 +1,175 @@
+<% if (doc_data) { %>
+<div class="response-container">
+    <!-- everything related to response going to be here -->
+    <h2>Document Details</h2>
+    <p>details of your document will be shown below</p>
+    <hr style="width: 109%; transform: translateX(-31px)" />
+    <div class="alert-success my-3 px-3 py-3">
+        <strong> Query </strong>
+        <div id="search_query_string">
+            <code><%= doc_data.search_string %></code>
+        </div>
+    </div>
+    <% if (doc_data.found) { %>
+    <div class="alert-success my-3 px-3 py-3">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <strong> Queried word found </strong>
+    </div>
+    <div class="alert-success my-3 px-3 py-3">
+        <strong> Search Count: </strong><%= doc_data.count %>
+    </div>
+    <div class="alert-success my-3 px-3 py-3">
+        <strong> Search Highlights </strong>
+        <div class="my-3">
+            <small> <%= doc_data.local_text %> </small>
+        </div>
+    </div>
+    <% } else { %>
+    <div class="alert-danger my-3 px-3 py-3">
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <strong> Queried word not found </strong>
+    </div>
+    <% } %>
+
+    <div class="alert-dark my-3 px-3 py-3">
+        <strong> Popular Words </strong>
+        <div>
+            <% for(let i in doc_data.popular_word) { %>
+                <%= doc_data.popular_word[i][1] %>, 
+            <% } %>
+        </div>
+    </div>
+
+
+    <div class="accordion shadow-sm accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                >
+                    Document Details
+                </button>
+            </h2>
+            <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample"
+            >
+                <div class="accordion-body">
+                    <div class="small">
+                        <table class="table table-success table-striped"> 
+                                <tr>
+                                    <th>Name</td>
+                                    <th>Specification</td>
+                                </tr>
+                                <tr>
+                                    <td>Page Count</td>
+                                    <td><%= doc_data.numpages %></td>
+                                </tr>                           
+                            <% for(let i in doc_data.info) { %>
+                                <tr>
+                                    <td><%= i %></td>
+                                    <td><%= doc_data.info[i] %></td>
+                                </tr>
+                            <% } %>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                >
+                    Detailed Search Highlights
+                </button>
+            </h2>
+            <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+            >
+                <div class="accordion-body">
+                    <div class="small mt-3" id="search_highlight"><%= doc_data.text %></div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                >
+                    Word Counts
+                </button>
+            </h2>
+            <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+            >
+                <div class="accordion-body">
+                    <div class="small justify-content-center">
+                        <span class="row">
+                            <div class="col-3 center shadow-sm px-3 py-3 mx-3 my-1">
+                                word
+                                <span class="badge bg-secondary">count</span>
+                            </div>
+                        </span>
+                        <div class="row">
+                            <% for(let i in doc_data.word_count) { %>
+                            <div class="col-3 center shadow-sm px-3 py-3 mx-3 my-1">
+                                <%= doc_data.word_count[i][1] %>
+                                <span class="badge bg-secondary"><%= doc_data.word_count[i][0] %></span>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                >
+                    Raw Text
+                </button>
+            </h2>
+            <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample"
+            >
+                <div class="accordion-body">
+                    <div class="small mt-3"><%= doc_data.text %></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% } %>
