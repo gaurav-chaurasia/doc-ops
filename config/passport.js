@@ -29,7 +29,7 @@ const googleStrategyConfig = new GoogleStrategy({
             if (user) {
                 return done(null, user);
             } else {
-                const new_user = await User.create({
+                const new_user = new User({
                     email: profile.email,
                     profile: {
                         name: profile.displayName,
@@ -45,6 +45,8 @@ const googleStrategyConfig = new GoogleStrategy({
                     accessTokenExpires: moment().add(params.expires_in, 'seconds').format(),
                     refreshToken,
                 });
+
+                await new_user.save();
                 return done(null, new_user);
             }
         } catch (err) {

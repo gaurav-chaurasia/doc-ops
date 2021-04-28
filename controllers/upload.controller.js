@@ -3,6 +3,7 @@ const axios = require('axios');
 const pdf = require('pdf-parse');
 const util = require('util');
 const fs = require('fs');
+const Document = require('../models/document.model');
 
 
 // default render callback
@@ -35,19 +36,35 @@ let options = {
 
 
 exports.local = async (req, res, next) => {
-    const FILENAME = req.file.filename;
-    res.redirect(`/api/ope/${FILENAME}`);
+    try {
+        const FILENAME = req.file.filename;
+        const doc = await Document.create({
+            user: req.user,
+            name: req.file.filename,
+            client_ip: req.client_ip,
+        });
+
+        res.redirect(`/api/ope/${FILENAME}`);
+    } catch(err) {
+        return next(err);
+    }
 };
 
 exports.S3 = (req, res) => {
     //
 };
 
-exports.getAfterDocPostLoggedIn = (req, res) => {
-    res.render('v1/index_loggedin', { doc_data: '' });
+exports.getAfterDocPostLoggedIn = async (req, res) => {
+    try {
+        const doc_names = await Document.find({ user: req.user }, { _id: 0, name: 1});
+        res.render('v1/index_loggedin', { doc_data: '', doc_names: doc_names });
+    } catch (err) {
+        return next(err);
+    }
 };
-exports.afterDocPostLoggedIn = (req, res, next) => {
+exports.afterDocPostLoggedIn = async (req, res, next) => {
     const FILENAME = req.body.doc_name;
+    const doc_names = await Document.find({ user: req.user }, { _id: 0, name: 1 });
 
     let SEARCH_STRING = req.body.search_string.toLocaleLowerCase().trim();
     SEARCH_STRING = SEARCH_STRING.replace(/  +/g, ' ');
@@ -62,7 +79,7 @@ exports.afterDocPostLoggedIn = (req, res, next) => {
             { msg: 'File does not exits' },
             { msg: 'Goto home page and upload the file again to continue!!' },
         ]);
-        return res.status(200).render('v1/index_loggedin', { doc_data: '' });
+        return res.status(200).render('v1/index_loggedin', { doc_data: '', doc_names: doc_names });
     }
 
     let dataBuffer = fs.readFileSync(__dirname + `\\uploads\\${FILENAME}`);
@@ -138,6 +155,7 @@ exports.afterDocPostLoggedIn = (req, res, next) => {
             };
             res.status(200).render('v1/index_loggedin', {
                 doc_data: json_data,
+                doc_names: doc_names,
             });
         })
         .catch((err) => {

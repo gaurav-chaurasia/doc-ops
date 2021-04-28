@@ -8,7 +8,6 @@ const userSchema = new mongoose.Schema(
         email_verification_token: String,
         email_verified: Boolean,
 
-        snapchat: String,
         facebook: String,
         twitter: String,
         google: String,
@@ -16,8 +15,6 @@ const userSchema = new mongoose.Schema(
         instagram: String,
         linkedin: String,
         steam: String,
-        twitch: String,
-        quickbooks: String,
         tokens: Array,
 
         profile: {

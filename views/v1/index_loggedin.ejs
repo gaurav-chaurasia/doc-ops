@@ -10,11 +10,10 @@
                 <div class="custom-form-group">
                     <label class="custom-form-label" for="email">Select Doc</label>
                     <select name="doc_name" id="" style="border: none; width: 100%; padding: 10px; padding-top: 15px; color: rgb(138, 138, 138);">
+                        <% doc_names.forEach((value, index, arr) => { %>
+                            <option value="<%= value.name %>"><%= value.name %></option>
+                        <% }) %>
                         <option value="1619590399448_CV390_SEMINAR_PRESENTATION.pdf">1619590399448_CV390_SEMINAR_PRESENTATION.pdf</option>
-                        <option value="1619615712980_TEMP.pdf">1619615712980_TEMP.pdf</option>
-                        <option value="1619616193079_TEMP.pdf">1619616193079_TEMP.pdf</option>
-                        <option value="1">1</option>
-                        <option value="1">1</option>
                     </select>
                 </div>
                 <div class="custom-form-group" style="height: 200px">

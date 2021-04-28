@@ -129,3 +129,15 @@ i is not defined
 [2021-04-28T17:16:27.175Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
 [2021-04-28T17:16:27.181Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
 [2021-04-28T17:16:32.224Z] [MASTER] [[32minfo[39m]: [32m✓[39m Database Connection Successful
+[2021-04-28T19:48:50.012Z] [MASTER] [[31merror[39m]: D:\practice\node\doc-ops\views\v1\index_loggedin.ejs:13
+    11|                     <label class="custom-form-label" for="email">Select Doc</label>
+    12|                     <select name="doc_name" id="" style="border: none; width: 100%; padding: 10px; padding-top: 15px; color: rgb(138, 138, 138);">
+ >> 13|                         <% doc_names.forEach((value, index, arr) => { %>
+    14|                             <option value="<%= value.name %>">value.name</option>
+    15|                         <% }) %>
+    16|                         <option value="1619590399448_CV390_SEMINAR_PRESENTATION.pdf">1619590399448_CV390_SEMINAR_PRESENTATION.pdf</option>
+
+doc_names is not defined
+[2021-04-28T19:49:49.913Z] [MASTER] [[32minfo[39m]: [32m✓[39m Server is Running at << [32mhttp://127.0.0.1:3000[39m >>
+[2021-04-28T19:49:49.917Z] [MASTER] [[32minfo[39m]: Press CTRL-C to stop
+[2021-04-28T19:49:52.944Z] [MASTER] [[32minfo[39m]: [32m✓[39m Database Connection Successful
