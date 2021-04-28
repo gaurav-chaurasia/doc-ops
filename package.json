@@ -27,6 +27,8 @@
     "passport": "^0.4.1",
     "passport-google-oauth2": "^0.2.0",
     "passport-oauth2-refresh": "^2.0.1",
+    "pdf-parse": "^1.1.1",
+    "util": "^0.12.3",
     "uuid": "^8.3.2",
     "validator": "^13.6.0",
     "winston": "^3.3.3"

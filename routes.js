@@ -12,7 +12,7 @@ require('./config/passport');
 // file upload setup
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'addons/python');
+        cb(null, 'controllers/uploads');
     },
     filename: (req, file, cb) => {
         const { originalname } = file;
@@ -33,7 +33,7 @@ router.get('/logout', userController.logout);
 router.post('/api/upload/doc/local', upload.single('doc_ops'), uploadController.local);
 router.post('/api/upload/doc/S3', uploadController.S3);
 
-router.get('/api/upload/:filename', opsController.docOpsResponse);
+// router.get('/api/upload/:filename', opsController.docOpsResponse);
 
 
 router.get('/auth/success', is_authenticated, (req, res, next) => {
