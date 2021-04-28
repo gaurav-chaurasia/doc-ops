@@ -81,8 +81,9 @@ nav .menuItems li:hover {
     max-width: 460px;
     min-width: 320px;
     background-color: #fff;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0px 0px 32px 0px rgba(221,230,237,0.4);
+    border: 1px solid rgb(245, 245, 245);
     padding-top: 0;
     padding: 32px;
     width: 100%;
@@ -378,8 +379,9 @@ label {
     min-height: 365px;
     min-width: 320px;
     background-color: #fff;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0px 0px 32px 0px rgba(221,230,237,0.4);
+    border: 1px solid rgb(245, 245, 245);
     min-width: 320px;
     padding-top: 0;
     padding: 32px;
