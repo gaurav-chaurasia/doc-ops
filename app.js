@@ -20,7 +20,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect(process.env.DATABASE_URI, () => {
+mongoose.connect(process.env.DATABASE_URI || 'mongodb://localhost:27020/test', () => {
     logger.info(`${chalk.green('✓')} Database Connection Successful`);
 });
 mongoose.connection.on('error', (err) => {
