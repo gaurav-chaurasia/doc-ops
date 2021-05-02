@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "12"
+services:
+  - mongodb
 script:
   - echo '*****Build Starts*****'
   - echo 'Installing Dependencies'
